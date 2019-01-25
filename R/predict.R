@@ -550,6 +550,6 @@ predict.ranger <- function(object, data = NULL, predict.all = FALSE,
     if (is.null(data)) {
      stop("Error: Argument 'data' is required for non-quantile prediction.") 
     }
-    predict(forest, data, predict.all, num.trees, type, se.method, seed, num.threads, verbose, object$inbag.counts, ...)
+    predict(forest, data, predict.all, num.trees, type, se.method, seed, num.threads, verbose, object$inbag.counts, ...)$predictions
   }
 }
